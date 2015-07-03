@@ -1,0 +1,9 @@
+body{
+    font-size: 12px;
+}
+
+.titles {
+    align-content: center;
+    border: 2em solid cornflowerblue;
+    padding: 2em;
+}
