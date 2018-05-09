@@ -95,13 +95,13 @@
     saveButton.addEventListener('click', function (event) {
         var data = signaturePad.toDataURL('image/png');
         console.log(data);
-// Send data to server instead...
-        // TODO Chen : call this function with ajax and add window open for telegram web
         //window.open('https://us-central1-faq-wlwnhq.cloudfunctions.net/helloWorld?dataImageUri=' + Base64.encode(data.split(',')[1]));
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", "https://us-central1-faq-wlwnhq.cloudfunctions.net/helloWorld?dataImageUri=' + Base64.encode(data.split(',')[1])", true);
         xhttp.send();
-        window.open('https://web.telegram.org/FAQDemoBot#/im?p=@FAQDemoBot');
+        setTimeout(function(){
+            window.open('https://web.telegram.org/FAQDemoBot#/im?p=@FAQDemoBot');
+        },5000);
     });
 
     cancelButton.addEventListener('click', function (event) {
