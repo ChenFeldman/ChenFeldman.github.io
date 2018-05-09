@@ -97,7 +97,7 @@
         console.log(data);
         //window.open('https://us-central1-faq-wlwnhq.cloudfunctions.net/helloWorld?dataImageUri=' + Base64.encode(data.split(',')[1]));
         var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "https://us-central1-faq-wlwnhq.cloudfunctions.net/helloWorld?dataImageUri=' + Base64.encode(data.split(',')[1])", true);
+        xhttp.open("GET", 'https://us-central1-faq-wlwnhq.cloudfunctions.net/helloWorld?dataImageUri=' + Base64.encode(data.split(',')[1]), true);
         xhttp.send();
         setTimeout(function(){
             window.open('https://web.telegram.org/FAQDemoBot#/im?p=@FAQDemoBot');
