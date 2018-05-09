@@ -36,7 +36,9 @@
         console.log(data);
 // Send data to server instead...
         // TODO Chen : call this function with ajax and add window open for telegram web
-        window.open('https://us-central1-faq-wlwnhq.cloudfunctions.net/helloWorld');
+        window.open('https://us-central1-faq-wlwnhq.cloudfunctions.net/helloWorld?dataImageUri=' + data.split(',')[1]);
+        alert('Thank you for your signature! Moving you back to Telegram');
+        window.open('https://web.telegram.org/FAQDemoBot#/im?p=@FAQDemoBot');
     });
 
     cancelButton.addEventListener('click', function (event) {
